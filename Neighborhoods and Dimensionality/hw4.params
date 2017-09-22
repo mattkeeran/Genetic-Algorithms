@@ -1,0 +1,17 @@
+ProblemType = Topology
+NumRuns = 10
+NumGenerations = 40
+NumPopulationDimensions = 2
+PopulationDimensionSize = 32
+NeighborhoodRadius = 1
+NeighborhoodType = COMPACT
+SelectionType = LINEAR_RANKING
+CrossOverType = NO_CROSSOVER
+CrossOverRate = 0.8
+MutationType = NO_MUTATION
+MutationRate = .01
+RandomSeed = 75981
+NumGenes = 1
+GeneSize = 1
+MinDnaValue = 0
+MaxDnaValue = 1000
