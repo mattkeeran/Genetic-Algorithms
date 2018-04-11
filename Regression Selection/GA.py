@@ -1,36 +1,23 @@
-import sys
-import csv
-import math
-import time
-import heapq
-import random
-import datetime
+# Predictive Regression Model Selection Using a Genetic Algorithm
+# By Matthew Keeran 2016
+
 import numpy as np
 import statsmodels.api as sm
+import sys, csv, math, time, heapq, random, datetime
 
-AIC = []
-BIC = []
-R2A = []
-fitness = []
-pfitness = []
-elites = []
+AIC, BIC, R2A = [], [], []
+fitness, pfitness, elites = [], [], []
 
-Fitm = 0
-Fitt = 0
-Mut = 0
-Sel = 0
-Cross = 0
-
+Fitm, Fitt, Mut, Sel, Cross = 0, 0, 0, 0, 0
 
 def type(x):
 	for i in x:
 		sys.stdout.write(i)
 		sys.stdout.flush()
-		#0.035		
+		# 0.035		
 		time.sleep(0.0)
 	print("")
 	return ""
-
 
 #generate random bitstring of length x
 def randbin(x):
@@ -111,7 +98,6 @@ def fitness():
 
 	printsol(bestfit)
 	printcoef(bestfit)
-	
 
 	#calculate proportional fitness of each individual	
 	
@@ -376,17 +362,13 @@ def printcoef(x):
 	print(fit1.summary())
 	return ""
 
-
 	
 type("\nPredictive Regression Model Selection Using a Genetic Algorithm")
-type("By Matthew Keeran")
-type("Design and Analysis of Algorithms: UCF Fall 2016")
-
+type("By Matthew Keeran (2016)")
 
 #read and parse data
 
 x = raw_input(type("\nPlease enter the directory and filename of csv\nExample: C:\\Users\\John\\Desktop\\Training.csv\n(Assumes there are headers)\n"))
-
 f = csv.reader(open(x, 'r'), delimiter=",", quotechar='|')
 
 #variables (header)
@@ -431,10 +413,9 @@ type("\nYou selected " + response + " as your response.")
 global population
 global generations
 
-
 population = 10					#assumes using only even number
 generations = 5
-selection = "proportional"				#["proportional", "uniform"]
+selection = "proportional"			#["proportional", "uniform"]
 crosstype = "uniform"				#["uniform", "single"]
 crossprob = 0.8
 mutate = 0.05
