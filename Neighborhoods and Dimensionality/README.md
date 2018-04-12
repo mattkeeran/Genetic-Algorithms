@@ -1,4 +1,4 @@
-# Measuring the Effects of Neighborhood Radius and Dimensionality of Genetic Algorithms
+# Effects of Neighborhood Radius and Dimensionality on Local Selection Algorithms
 ## By Matthew Keeran
 Runs via java Search hw4.params > output.csv
 
